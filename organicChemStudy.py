@@ -52,11 +52,10 @@ endingOrganicsWithWeights = { # all weights should add to 100. alkane 1% of the 
 }
 
 while True:
-    Starting = ""
-    Ending = ""
-    while Starting == Ending:
-        Starting = random.choices(list(startingOrganicsWithWeights), weights=list(startingOrganicsWithWeights.values()))[0]
-        Ending = random.choices(list(endingOrganicsWithWeights), weights=list(endingOrganicsWithWeights.values()))[0]
+    Starting = random.choices(list(startingOrganicsWithWeights), weights=list(startingOrganicsWithWeights.values()))[0]
+    Ending = random.choices(list(endingOrganicsWithWeights), weights=list(endingOrganicsWithWeights.values()))[0]
+    if Starting == Ending:
+        continue
     print("Turn %s into %s" % (Starting, Ending))
     c = input("Enter Q to quit anything else to continue: ")
     if c.upper() == "Q":
