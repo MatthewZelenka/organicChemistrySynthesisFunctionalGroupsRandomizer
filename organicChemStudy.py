@@ -2,6 +2,7 @@ import random
 
 organicsList = {
     "alkane": 50,
+    "alkene": 33/5,
     "haloalkane": 68,
     "alkene": 70,
     "dihaloakane": 40,
